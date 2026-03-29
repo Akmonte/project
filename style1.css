@@ -1,0 +1,133 @@
+/* Скидання базових налаштувань */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Налаштування фону та шрифту */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a; /* Глибокий чорний */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Головний контейнер (картка) */
+.card-container {
+    background-color: #0f0f0f;
+    max-width: 480px;
+    width: 100%;
+    border: 1px solid #222222;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Шапка профілю */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    /* Тут можна додати своє фото: 
+       background-image: url('ваше-фото.jpg'); 
+       background-size: cover; */
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #888888;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Секції */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+/* Текст "Про мене" */
+.about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cccccc;
+    font-weight: 300;
+}
+
+/* Теги навичок */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    border: 1px solid #333333;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    color: #aaaaaa;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    cursor: default;
+}
+
+/* Кнопки зв'язку */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+.link-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
