@@ -5,203 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my1profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        /* Базові налаштування */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505;
-            color: #ffffff;
-            line-height: 1.5;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Контейнер сітки (Bento Box) */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: minmax(150px, auto);
-            gap: 20px;
-            max-width: 1000px;
-            width: 100%;
-            /* Анімація появи */
-            animation: fadeIn 1s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Загальний стиль для всіх карток */
-        .card {
-            background-color: #111111;
-            border: 1px solid #222222;
-            border-radius: 20px;
-            padding: 30px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #444444;
-        }
-
-        .card h2 {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #777777;
-            margin-bottom: 20px;
-        }
-
-        /* 1. Головний профіль (займає 2 колонки) */
-        .profile {
-            grid-column: span 2;
-            justify-content: center;
-            background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
-        }
-        
-        .profile h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-        
-        .profile p {
-            color: #aaaaaa;
-            font-size: 1.1rem;
-            max-width: 80%;
-        }
-
-        .tags {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .tag {
-            background-color: #222222;
-            padding: 6px 14px;
-            font-size: 0.8rem;
-            border-radius: 20px;
-            color: #dddddd;
-        }
-
-        /* 2. Картка Формули 1 */
-        .f1-card {
-            grid-column: span 1;
-            grid-row: span 2;
-            background-color: #0a0a0a;
-            justify-content: space-between;
-        }
-
-        .driver {
-            margin-bottom: 20px;
-        }
-
-        .driver-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #333333;
-            line-height: 1;
-        }
-
-        .driver-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        /* 3. Картка Тревіса Скотта */
-        .music-card {
-            grid-column: span 1;
-            grid-row: span 2;
-        }
-
-        .album {
-            background-color: #1a1a1a;
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #2a2a2a;
-        }
-
-        .album-rodeo {
-            border-color: #ffffff; /* Виділяємо улюблений альбом */
-        }
-
-        .album h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .album p {
-            font-size: 0.8rem;
-            color: #888888;
-        }
-
-        /* 4. Картка Математики (займає 2 колонки) */
-        .math-card {
-            grid-column: span 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .formula-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .formula-box {
-            background-color: #0a0a0a;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #222222;
-            flex: 1;
-        }
-
-        .math-title {
-            font-size: 0.9rem;
-            color: #aaaaaa;
-            margin-bottom: 10px;
-        }
-
-        .math-equation {
-            font-family: 'Times New Roman', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
-
-        /* Адаптивність для телефонів */
-        @media (max-width: 768px) {
-            .bento-grid {
-                grid-template-columns: 1fr;
-            }
-            .profile, .f1-card, .music-card, .math-card {
-                grid-column: span 1;
-            }
-            .formula-container {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
@@ -224,13 +28,13 @@
             <div class="driver">
                 <div class="driver-number">16</div>
                 <div class="driver-name">Charles Leclerc</div>
-                <p style="font-size: 0.8rem; color: #777;">Scuderia Ferrari</p>
+                <p class="sub-text">Scuderia Ferrari</p>
             </div>
 
             <div class="driver">
                 <div class="driver-number">5</div>
                 <div class="driver-name">Sebastian Vettel</div>
-                <p style="font-size: 0.8rem; color: #777;">Legend</p>
+                <p class="sub-text">Legend</p>
             </div>
         </div>
 
@@ -240,7 +44,7 @@
             <div class="album album-rodeo">
                 <h3>Rodeo</h3>
                 <p>Travis Scott • 2015</p>
-                <p style="font-size: 0.7rem; margin-top: 5px; color: #bbb;">The masterpiece. 90210, Nightcrawler.</p>
+                <p class="album-desc">The masterpiece. 90210, Nightcrawler.</p>
             </div>
 
             <div class="album">
@@ -263,7 +67,7 @@
                     <div class="math-equation">
                         f(x) = &sum; a<sup>n</sup> cos(b<sup>n</sup> &pi; x)
                     </div>
-                    <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">Неперервна скрізь, не диференційовна ніде.</p>
+                    <p class="math-desc">Неперервна скрізь, не диференційовна ніде.</p>
                 </div>
 
                 <div class="formula-box">
@@ -271,7 +75,7 @@
                     <div class="math-equation">
                         (cos x + i sin x)<sup>n</sup> = cos(nx) + i sin(nx)
                     </div>
-                    <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">База комплексного аналізу.</p>
+                    <p class="math-desc">База комплексного аналізу.</p>
                 </div>
 
             </div>
