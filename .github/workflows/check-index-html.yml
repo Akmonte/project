@@ -1,0 +1,24 @@
+name: Check index.html exists
+
+on:
+  workflow_dispatch: # Дозволяє запускати вручну
+
+jobs:
+  check-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run check script
+        run: bash check_index.sh
+
+      - name: Update README on success
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          echo -e "\n- main: index.html confirmed ✅" >> README.md
+          git add README.md
+          git commit -m "Confirmed index.html existence via Action"
+          git push
